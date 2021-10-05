@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Bookings</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% booking %>
+    <table>
+        <tr>
+            <th>
+                Book name
+            </th>
+            <td>
+                <%= booking.name %>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                numTickets
+            </th>
+            <td>
+                <%= booking.numTickets %>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                team
+            </th>
+            <td>
+                <%= booking.team %>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                superhero
+            </th>
+            <td>
+                <%= booking.superhero %>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                email
+            </th>
+            <td>
+                <%= booking.email %>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                message
+            </th>
+            <td>
+                <%= booking.message %>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                payment
+            </th>
+            <td>
+                <%= booking.payment %>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Delete
+            </th>
+            <td>
+                <form action="/bookings/delete/<%= booking.$loki %>" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Update
+            </th>
+            <td>
+                <a href="/bookings/update/<%= booking.$loki %>">Update</a>
+            </td>
+        </tr>
+     </table>
+
+     
+  </body>
+</html> 
